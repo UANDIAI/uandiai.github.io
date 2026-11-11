@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>UANDI AI — Song Passport™ Presentation Portal</title>
+  <meta name="description" content="UANDI AI — Song Passport™ Confidential Evaluation & Non-Disclosure Agreement. Authorized evaluation only.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070708; --panel: #131416; --bg-2: #0d0e10;
+      --line: rgba(255,255,255,0.08); --line-strong: rgba(255,255,255,0.16);
+      --text: #ecebe6; --text-2: #c9c8c2; --muted: #9b9a94; --dim: #6d6c67;
+      --gold: #d4b65a; --chrome: #e9e9e9;
+      --gold-gradient: linear-gradient(135deg, #efd98a 0%, #d4b65a 38%, #b8962e 70%, #e3c874 100%);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.55;
+      -webkit-font-smoothing: antialiased; display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+      background-image: radial-gradient(1200px 500px at 50% -200px, rgba(212,182,90,0.09), transparent 60%),
+                        radial-gradient(900px 400px at 100% 100%, rgba(255,255,255,0.03), transparent 60%);
+    }
+    .card {
+      width: 100%; max-width: 560px; background: linear-gradient(180deg, var(--panel) 0%, var(--bg-2) 100%);
+      border: 1px solid var(--line); border-radius: 14px; padding: 34px 32px 30px; position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 1px 0 rgba(255,255,255,0.03) inset; text-align: center;
+    }
+    .card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 1px; border-radius: 14px 14px 0 0;
+      background: linear-gradient(90deg, transparent, rgba(212,182,90,0.45), transparent); }
+    .wordmark { font-weight: 700; letter-spacing: 0.42em; font-size: 15px; text-transform: uppercase; padding-left: .42em;
+      background: linear-gradient(180deg, #ffffff 0%, #d9d9d9 55%, #9b9b9b 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .product { margin-top: 6px; font-weight: 600; letter-spacing: 0.3em; font-size: 11.5px; text-transform: uppercase; padding-left: .3em;
+      background: var(--gold-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .portal { margin-top: 4px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+    hr { border: 0; height: 1px; background: var(--line); margin: 24px 0; }
+    h1 { margin: 0 0 10px; font-family: var(--serif); font-weight: 600; font-size: 30px; line-height: 1.15; color: var(--chrome); }
+    p { margin: 0 0 12px; color: var(--text-2); }
+    .lede { color: var(--muted); font-size: 15px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px;
+      font: inherit; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;
+      padding: 15px 28px; border-radius: 9px; border: 1px solid transparent; cursor: pointer; color: #121212;
+      background: var(--gold-gradient); box-shadow: 0 8px 26px rgba(212,182,90,0.18); transition: box-shadow .15s, transform .12s; }
+    .btn:hover { box-shadow: 0 10px 32px rgba(212,182,90,0.3); }
+    .btn:active { transform: translateY(1px); }
+    .spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(0,0,0,0.25); border-top-color: #121212; animation: spin .8s linear infinite; display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hint { margin-top: 22px; font-size: 12.5px; color: var(--dim); }
+    .hint strong { color: var(--muted); font-weight: 600; }
+    .notice { margin-top: 26px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+    @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+    @media (max-width: 480px) { .card { padding: 26px 20px; } h1 { font-size: 26px; } }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="wordmark">UANDI AI</div>
+    <div class="product">Song Passport™</div>
+    <div class="portal">Confidential Presentation Portal</div>
+    <hr>
+    <h1>Opening your confidential agreement</h1>
+    <p class="lede">You will read the Confidential Evaluation &amp; Non-Disclosure Agreement, sign it electronically, and the presentation will play for you immediately after.</p>
+    <a class="btn" id="go" href="#" rel="noopener"><span class="spinner" id="spin" aria-hidden="true"></span><span id="goText">Continue to the agreement</span></a>
+    <p class="hint">If Google shows <strong>“Sorry, unable to open the file at this time,”</strong> your browser is signed into several Google accounts. Open this link in a private / incognito window and it will load.</p>
+    <p class="notice">Confidential &amp; Proprietary — UANDI AI, LLC — Authorized Evaluation Only — Do Not Distribute</p>
+  </main>
+
+  <script>
+    (function () {
+      // The Google Apps Script web app that runs the portal.
+      var APP = 'https://script.google.com/macros/s/AKfycbyRTxURLmJHM9X_ZaSZwpF1jLYfBrE9ZRJOXFwPCECJVzgiF74530om4Y6sCMrz1jNg/exec';
+      // Universal signing key. If the key is ever regenerated from the admin console, update this one line.
+      var SIGN_KEY = 'FlQe9TwEFWU2KlSglhiVObIUl67UWYoHp-TIV6af9LA';
+
+      // Pass-through: /songpassport/?view=admin → admin console; /songpassport/?token=… → a personal invitation. Otherwise the universal link.
+      var q = new URLSearchParams(window.location.search);
+      var target;
+      if (q.get('view') === 'admin') target = APP + '?view=admin';
+      else if (q.get('token')) target = APP + '?token=' + encodeURIComponent(q.get('token'));
+      else target = APP + '?sign=' + SIGN_KEY;
+
+      var a = document.getElementById('go');
+      a.href = target;
+      var stopped = false;
+      a.addEventListener('click', function () { stopped = true; });
+      // Give the page a beat to render, then go. The button stays as a manual fallback.
+      setTimeout(function () {
+        if (stopped) return;
+        document.getElementById('spin').style.display = 'none';
+        document.getElementById('goText').textContent = 'Continue to the agreement';
+        window.location.replace(target);
+      }, 1200);
+    })();
+  </script>
+</body>
+</html>
